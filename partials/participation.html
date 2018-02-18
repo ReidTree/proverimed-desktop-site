@@ -1,0 +1,35 @@
+<div class="participation-container container">
+  <div class="row">
+    <div class="vendor-list-title">
+      <h3>PARTICIPATING VENDORS</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="vendor-name col-sm-6">
+      VENDOR NAME
+    </div>
+    <div class="vendor-code col-sm-2">
+      VENDOR CODE
+    </div>
+    <div class="vendor-city col-sm-2">
+      VENDOR CITY
+    </div>
+    <div class="vendor-state col-sm-2">
+      VENDOR STATE
+    </div>
+  </div>
+  <div class="vendor-list-repeat row" ng-repeat="vendor in vendorList">
+    <div class="col-sm-6">
+      {{vendor.name}}
+    </div>
+    <div class="col-sm-2">
+      {{vendor.code}}
+    </div>
+    <div class="col-sm-2">
+      {{vendor.city}}
+    </div>
+    <div class="col-sm-2">
+      {{vendor.state}}
+    </div>
+  </div>
+</div>

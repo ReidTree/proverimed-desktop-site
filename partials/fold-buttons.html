@@ -1,0 +1,9 @@
+<div class="container-fluid fold-btn-container" >
+  <div class="fold-btn-wrap row">
+    <div ng-repeat="foldBtns in foldBtn" class={{foldBtns.class+foldBtns.col}} ng-click="routeClick(this.foldBtns.linkTo, true, route)" >
+      <div class="fold-btn ">
+        <strong class="fold-text">{{foldBtns.value}}</strong>
+      </div>
+    </div>
+  </div>
+</div>
