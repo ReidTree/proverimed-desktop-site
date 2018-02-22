@@ -8,11 +8,8 @@ app.controller('ctrl', function($scope, $location, proverimedFactory){
     $location.path(x)
   }
 
-  $scope.portalClick = function(x) {
-    if(x === true) {
-      return alert('Enroll page not supported currently')
-    } else {
-      return alert('This will eventally link to plumbing login')
-    }
+  $scope.portalClick = function() {
+    var login = "https://gapro.onknowledgekubesandbox.co.uk/gapro-homepage?refresh=false";
+    window.location.assign(login)
   }
 });
