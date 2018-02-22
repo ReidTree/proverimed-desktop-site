@@ -9,7 +9,7 @@ app.controller('ctrl', function($scope, $location, proverimedFactory){
   }
 
   $scope.portalClick = function() {
-    var login = "https://gapro.onknowledgekubesandbox.co.uk/gapro-homepage?refresh=false";
+    var login = "https://gapro.onknowledgekubesandbox.co.uk/login";
     window.location.assign(login)
   }
 });
