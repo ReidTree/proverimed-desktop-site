@@ -70,3 +70,24 @@ app.directive('foldCont', function() {
     },
   }
 });
+
+app.directive('pressIncorporation', function() {
+  return {
+    transclude: false,
+    templateUrl: "../partials/press/incorporation-3-30-2016.html",
+  }
+});
+
+app.directive('pressCapital', function() {
+  return {
+    transclude: false,
+    templateUrl: "../partials/press/capital-5-19-2016.html",
+  }
+});
+
+app.directive('pressWolffis', function() {
+  return {
+    transclude: false,
+    templateUrl: "../partials/press/wolffis-8-18-2017.html",
+  }
+});

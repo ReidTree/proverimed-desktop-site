@@ -37,7 +37,7 @@ div.active .fold-btn  {padding: 21px 0; background-color: white; color: black;}
 
 
 #portal-wrap { position: relative; width: 100%; margin: 0 auto; z-index: 100; }
-#portal, #enroll { border: 3px solid rgba(0,135,220,1); box-shadow: 0px 0px 3px 10px rgba(255,255,255,.5); text-align: center; font-size: 1.2em; cursor: pointer; background-color: rgba(255,255,255,1); font-family: 'Noto Sans', sans-serif; }
+#portal, #enroll { border: 3px solid rgba(0,135,220,1); box-shadow: 0px 0px 3px 10px rgba(255,255,255,.5); text-align: center; font-size: 1em; cursor: pointer; background-color: rgba(255,255,255,1); font-family: 'Noto Sans', sans-serif; }
 div#portal-wrap div.portal-title-wrap:hover { background-color: rgba(0,135,220,1); box-shadow: 0px 0px 0px 0px rgba(255,255,255,.5); color: white; }
 .portal-title { padding: 5% 0; }
 
@@ -74,10 +74,23 @@ p.free-check {font-size: 20px; transform: translateY(115%); -ms-transform: trans
 /* ABOUT VIEW  END*/
 
 /* NEWS VIEW  START*/
-.news-container { width: 100%; } .news-article { max-width: 1200px; margin: 0 auto; } .author { margin: 5px 0 30px 0; } .news-title { margin: 40px 0 0 0; } .news-content {display: inline;} .news-content span img {float: left; margin-right: 10px;}
+.parse-news { display: block; margin: 80px 0;}
+.next-news, .prev-news { display: inline-block; cursor: pointer; border: 2px solid black; padding: 5px 10px; font-weight: bold;}
+.next-news { float: right;}
+.prev-news { float: left;}
+.recent-news-btn { display: inline; margin: 0 10px; cursor: pointer;}
+.recent-news-btn:hover { color: rgba(0,135,220,1);}
+.news-articles-selection { border-top: 1px solid black; border-bottom: 1px solid black;}
+.recent-news { margin: 0 10px;}
+.pressTitleDetails { margin: 0 0 40px 0;}
+.pressDate { float: right;}
+.pressImg { max-width: 500px;}
+.news-container { width: 100%; } .news-article { max-width: 1200px; margin: 50px auto; } .author { margin: 5px 0 30px 0; } .news-title { margin: 40px 0 0 0; } .news-content {display: inline;} .news-content span img {float: left; margin-right: 10px;}
+.news-title, .news-subtitle { text-align: center; }
 /* NEWS VIEW  END*/
 
 .contact-container { margin: 50px 0; font-size: 30px;}
+.email-contact { font-size: 24px;}
 
 /* FOOTER / TRADE MARK START*/
 .trade-mark { margin: 0 auto; width: 200px; font-size: 10px; text-align: center; padding: 16px; bottom: 0; }
