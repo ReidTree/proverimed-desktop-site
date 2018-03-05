@@ -1,14 +1,19 @@
-<div class="news-conainter">
-  <div class="news-article">
-    <div class="news-articles-selection">
-      <h5 class="recent-news">
-        Recent News
-      </h5>
-      <div class="recent-news-btn" ng-click="currentNews('pressIncorporation')">Incorporates</div>
-      <div class="recent-news-btn" ng-click="currentNews('pressCapital')">Raises Capital</div>
-      <div class="recent-news-btn" ng-click="currentNews('pressWolffis')">Welcomes New VP</div>
+<div class="news-container container">
+  <div class="row">
+
+    <div class="col-sm-3">
+      <img class="pressImg" src="../images/33.jpeg">
+      <div class="news-articles-selection">
+        <h5 class="recent-news">
+          Recent News
+        </h5>
+        <div class="recent-news-btn" ng-click="currentNews('pressIncorporation')">Incorporates</div>
+        <div class="recent-news-btn" ng-click="currentNews('pressCapital')">Raises Capital</div>
+        <div class="recent-news-btn" ng-click="currentNews('pressWolffis')">Welcomes New VP</div>
+      </div>
     </div>
-    <div>
+
+    <div class="col-sm-9">
       <div ng-if="newsObject.current === 'pressIncorporation'">
         <press-incorporation></press-incorporation>
       </div>
@@ -18,13 +23,21 @@
       <div ng-if="newsObject.current === 'pressWolffis'">
         <press-wolffis></press-wolffis>
       </div>
-
     </div>
-    <div class="parse-news">
-      <div class="prev-news" ng-click="currentNews('prev')">
-        < PREVIOUS
+
+  </div>
+  <div class="row">
+
+    <div class="col-sm-2">
+      <div class="news-controls" ng-click="currentNews('prev')">
+        < PREV
       </div>
-      <div class="next-news" ng-click="currentNews('next')">
+    </div>
+
+    <div class="col-sm-8"> </div>  <!-- break in page -->
+
+    <div class="col-sm-2">
+      <div class="news-controls" ng-click="currentNews('next')">
         NEXT >
       </div>
     </div>
