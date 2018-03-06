@@ -1,7 +1,9 @@
 body { margin: 0; width: 100%; font-family: 'Playfair Display', serif; }
 
-#portal, #enroll, .home, .about, .pricing, .news, .contact, .view-title, .pricing-container { font-family: 'Noto Sans', sans-serif; }
-#portal, #enroll, .home, .about, .pricing, .news, .contact, .view-title, .pricing-container { font-family: 'Helvetica', sans-serif; }
+.material-icons.md-24 { font-size: 18px; }
+
+#portal, #enroll, .home, .about, .pricing, .news, .team, .view-title, .pricing-container { font-family: 'Noto Sans', sans-serif; }
+#portal, #enroll, .home, .about, .pricing, .news, .team, .view-title, .pricing-container { font-family: 'Helvetica', sans-serif; }
 
 .logo-wrap { max-width: 1200px; margin: 20px auto; }
 #logo { width: 100%; }
@@ -28,7 +30,7 @@ div.fold-btn-container div.row { margin: 0 auto}
 div.active .fold-btn  {padding: 21px 0; background-color: white; color: black;}
 div.active { background-color: black; transition: 1s}
 .fold-btn:hover { background-color: white; color: black; }
-.home, .about, .pricing, .news, .contact { border-right: 3px solid white; text-align: center; align-self: center; cursor: pointer;  background-color: #0087dc}
+.home, .about, .pricing, .news, .team { border-right: 3px solid white; text-align: center; align-self: center; cursor: pointer;  background-color: #0087dc}
 .home { border-left: 3px solid white;}
 
 
@@ -40,7 +42,7 @@ div.active { background-color: black; transition: 1s}
 
 
 #portal-wrap { position: relative; width: 100%; margin: 0 auto; z-index: 100; }
-#portal, #enroll { border: 3px solid rgba(0,135,220,1); box-shadow: 0px 0px 3px 10px rgba(255,255,255,.5); text-align: center; font-size: 1em; cursor: pointer; background-color: rgba(255,255,255,1); font-family: 'Noto Sans', sans-serif; }
+#portal, #enroll { border: 3px solid rgba(0,135,220,1); box-shadow: 0px 0px 6px 10px rgba(255,255,255,.5); text-align: center; font-size: 1em; cursor: pointer; background-color: rgba(255,255,255,1); font-family: 'Noto Sans', sans-serif; transition: .1s; }
 div#portal-wrap div.portal-title-wrap:hover { background-color: rgba(0,135,220,1); box-shadow: 0px 0px 0px 0px rgba(255,255,255,.5); color: white; }
 .portal-title { padding: 5% 0; }
 
@@ -89,7 +91,22 @@ p.free-check {font-size: 20px; transform: translateY(115%); -ms-transform: trans
 
 .contact-container { margin: 50px 0; font-size: 30px;}
 .email-contact { font-size: 24px;}
+.social-icons {max-width: 50px; cursor: pointer; display: inline-block; bottom: 0; transition: .2s;}
+div.col-sm-1 a img.social-icons { transform: translate(-60%,40%); -ms-transform: translate(-60%,40%); -webkit-transform: translate(-60%,40%);}
+.social-icons:hover {filter: grayscale(100%);}
+.contact-individual {padding: 10px 0; }
+.contact-id {background-color: rgba(0,135,220,.1); padding: 10px 0; border-left: 4px solid rgba(0,135,220,1);}
+.contact-email {display: inline-block; font-size: 1rem; font-weight: 400;}
+.contact-name, .contact-title { margin-bottom: 0;}
+.contact-title { font-size: 1.2rem;}
+.contact-center {text-align: center;}
+.contact-social { margin-top: 40px;}
+.contact-email-hover:hover {text-decoration: none; color: grey;}
+a:hover {text-decoration: none; color: grey;}
 
 /* FOOTER / TRADE MARK START*/
 .trade-mark { margin: 0 auto; width: 200px; font-size: 10px; text-align: center; padding: 16px; bottom: 0; }
 /* FOOTER / TRADE MARK END*/
+
+/* .water-mark-contain {width: 40%; position: absolute; bottom: 0; right: 0; overflow-x: hidden;} */
+.waterMark {position: absolute; bottom: 0; right: 0; opacity: .1; z-index: -1; width: 40%; transform: translateY(30%); -ms-transform: translateY(30%); -webkit-transform: translateY(30%); }

@@ -1,3 +1,5 @@
+<water-mark></water-mark>
+
 <div class="news-container container">
   <div class="row">
 
@@ -7,22 +9,54 @@
         <h5 class="recent-news">
           Recent News
         </h5>
-        <div class="recent-news-btn" ng-click="currentNews('pressIncorporation')">Incorporates</div>
+        <div ng-repeat="article in newsObject.arr" class="recent-news-btn" ng-click="currentNews(article.id)">{{article.title}}</div>
+        <!-- <div class="recent-news-btn" ng-click="currentNews('pressIncorporation')">Incorporates</div>
         <div class="recent-news-btn" ng-click="currentNews('pressCapital')">Raises Capital</div>
         <div class="recent-news-btn" ng-click="currentNews('pressWolffis')">Welcomes New VP</div>
+        <div class="recent-news-btn" ng-click="currentNews('pressTechstars')">Press Release: TechStars</div> -->
       </div>
     </div>
 
     <div class="col-sm-9">
-      <div ng-if="newsObject.current === 'pressIncorporation'">
+      <div  >
+
+        <div class="news-conainter" >
+          <div ng-repeat="article in newsArticles" class="news-article" ng-if="newsObject.current.id === article.id">
+            <div class="pressTitleDetails">
+              <h4 class="pressDate"> <strong>{{article.date}}</strong> </h4>
+              <h6>{{article.author}}</h6>
+              <h6>{{article.company}}</h6>
+              <h6><a href="mailto:msparkia@proverimed.com">{{article.email}}</a></h6>
+              <h2 class="news-title">{{article.title}}</h2>
+              <h5 class="news-subtitle">{{article.subTitle}}</h5>
+            </div>
+            <div class="news-content">
+              <!-- <span><img class="pressImg" src="../images/33.jpeg"></span> -->
+              <span>
+                <p ng-repeat="paragraph in article.paragraphs" ng-init="outerIndex = $index"><strong ng-if="outerIndex===0">{{article.bold}}</strong>
+                  <span>{{paragraph}}</span>
+                </p>
+
+                <p><strong>{{article.about[0]}}</strong>{{article.about[1]}}</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div ng-if="newsObject.current.id === 'pressIncorporation'">
         <press-incorporation></press-incorporation>
       </div>
-      <div ng-if="newsObject.current === 'pressCapital'">
+      <div ng-if="newsObject.current.id === 'pressCapital'">
         <press-capital></press-capital>
       </div>
-      <div ng-if="newsObject.current === 'pressWolffis'">
+      <div ng-if="newsObject.current.id === 'pressWolffis'">
         <press-wolffis></press-wolffis>
       </div>
+      <div ng-if="newsObject.current.id === 'pressTechstars'">
+        <press-techstars></press-techstars>
+      </div> -->
+
     </div>
 
   </div>

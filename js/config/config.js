@@ -6,9 +6,9 @@ app.config(function($routeProvider){
       controller: 'ctrl',
       templateUrl: 'partials/home.html'
     })
-    .when('/contact', {
+    .when('/team', {
       controller: 'ctrl',
-      templateUrl: 'partials/contact.html'
+      templateUrl: 'partials/team.html'
     })
     .when('/news', {
       controller: 'ctrl',

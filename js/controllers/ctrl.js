@@ -1,7 +1,9 @@
 var app = angular.module('proverimedApp');
 
-app.controller('ctrl', function($scope, $location, proverimedFactory){
-  $scope.vendorList = proverimedFactory.vendorList;
+app.controller('ctrl', function($scope, $location, proverimedFactory, apiFactory){
+  $scope.vendorList = apiFactory.vendorList;
+  $scope.newsArticles = apiFactory.newsArticles;
+  $scope.contacts = apiFactory.ExecContacts;
 
   $scope.routeClick = function(x, where, route) {
     $scope.currentLocation = proverimedFactory.highLight(x, where, route);
@@ -9,7 +11,7 @@ app.controller('ctrl', function($scope, $location, proverimedFactory){
   }
 
   $scope.newsObject = proverimedFactory.newsObject();
-  $scope.news = "pressIncorporation"
+  // $scope.news = "pressIncorporation"
   $scope.currentNews = function(x) {
     $scope.news = proverimedFactory.currentNews(x);
     $scope.newsObject = proverimedFactory.newsObject();
