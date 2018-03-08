@@ -1,53 +1,26 @@
 var app = angular.module('proverimedApp');
 
-// app.directive('infoSlide', function() {
-//   return {
-//     link: function(scope, element, attr) {
-//       var windowX = window.innerWidth;
-//       element.css({
-//         width: windowX
-//       });
-//     }
-//   }
-// });
-//
-// app.directive('homeSlide', ['$interval', function($interval) {
-//   return {
-//     link: function(scope, element, attr) {
-//       var windowX = window.innerWidth;
-//       var count = 0;
-//       var imgs = ["https://static.pexels.com/photos/33972/pexels-photo.jpg", "./images/pexels2.jpeg", "./images/pexels3.jpeg", "./images/pexels4.jpeg", "./images/pexels5.jpeg"]
-//       scope.images = imgs[count];
-//
-//       setInterval(function(){
-//         count++;
-//         count = imgs.length - 1 >= count ? count : 0;
-//       }, 5000);
-//     }
-//   }
-// }]);
-
 app.directive('foldCont', function() {
   return {
     transclude: false,
-    templateUrl: "../partials/fold-buttons.html",
+    templateUrl: "../partials/fold.html",
     link: function(scope, element, attr) {
-      var specific = window.document.URL.split("/");
+      var currentUrl = window.document.URL;
+      var specific = currentUrl.split("/");
       var lightEle = specific[specific.length - 1];
       var init = "/" + lightEle;
       var count = 0;
       var foldBtns = [
-        {"class": "home", "linkTo": "/home", "value": "HOME", "col": " col-sm-2"},
-        {"class": "about", "linkTo": "/about", "value": "ABOUT", "col": " col-sm-2"},
-        {"class": "pricing", "linkTo": "/pricing", "value": "PRICING & PARTICIPATION", "col": " col-sm-4"},
-        {"class": "news", "linkTo": "/news", "value": "NEWS", "col": " col-sm-2"},
-        {"class": "team", "linkTo": "/team", "value": "TEAM", "col": " col-sm-2"},]
+        {"class": "home", "linkTo": "/home", "value": "HOME", "col": " col-2"},
+        {"class": "about", "linkTo": "/about", "value": "ABOUT", "col": " col-2"},
+        {"class": "pricing", "linkTo": "/pricing", "value": "PRICING & PARTICIPATION", "col": " col-4"},
+        {"class": "news", "linkTo": "/news", "value": "NEWS", "col": " col-2"},
+        {"class": "team", "linkTo": "/team", "value": "TEAM", "col": " col-2"},]
 
       function changeBack(x, check){
         if (typeof lightEle === 'number'){
           foldBtns[lightEle].class = init;
         }
-
         foldBtns.forEach(function(e){
           if(e.class === x){
             lightEle = count;
@@ -60,7 +33,11 @@ app.directive('foldCont', function() {
 
         init = foldBtns[lightEle].class.substr(0,foldBtns[lightEle].class.length - 7);
       }
-      changeBack(lightEle, init);
+
+      if ( currentUrl === "https://www.proverimed.com/" || currentUrl === "https://proverimed.com/" || currentUrl === "http://localhost:3000/" || currentUrl === "http://www.proverimed.com/" || currentUrl === "http://proverimed.com/") {
+        changeBack("home")
+      } else { changeBack(lightEle, init); }
+
       scope.route = function(x, check){
         count = 0;
         changeBack(x, check);

@@ -1,19 +1,14 @@
-<water-mark></water-mark>
 
 <div class="news-container container">
   <div class="row">
 
-    <div class="col-sm-3">
-      <img class="pressImg" src="../images/33.jpeg">
+    <div class="col-sm-3 ">
+      <img class="pressImg" src="../images/33.png">
       <div class="news-articles-selection">
         <h5 class="recent-news">
           Recent News
         </h5>
-        <div ng-repeat="article in newsObject.arr" class="recent-news-btn" ng-click="currentNews(article.id)">{{article.title}}</div>
-        <!-- <div class="recent-news-btn" ng-click="currentNews('pressIncorporation')">Incorporates</div>
-        <div class="recent-news-btn" ng-click="currentNews('pressCapital')">Raises Capital</div>
-        <div class="recent-news-btn" ng-click="currentNews('pressWolffis')">Welcomes New VP</div>
-        <div class="recent-news-btn" ng-click="currentNews('pressTechstars')">Press Release: TechStars</div> -->
+        <div ng-repeat="article in newsArticles" class="recent-news-btn" ng-click="currentNews(article.id)">{{article.shortTitle}}</div>
       </div>
     </div>
 
@@ -31,7 +26,6 @@
               <h5 class="news-subtitle">{{article.subTitle}}</h5>
             </div>
             <div class="news-content">
-              <!-- <span><img class="pressImg" src="../images/33.jpeg"></span> -->
               <span>
                 <p ng-repeat="paragraph in article.paragraphs" ng-init="outerIndex = $index"><strong ng-if="outerIndex===0">{{article.bold}}</strong>
                   <span>{{paragraph}}</span>
@@ -44,35 +38,22 @@
         </div>
       </div>
 
-      <!-- <div ng-if="newsObject.current.id === 'pressIncorporation'">
-        <press-incorporation></press-incorporation>
-      </div>
-      <div ng-if="newsObject.current.id === 'pressCapital'">
-        <press-capital></press-capital>
-      </div>
-      <div ng-if="newsObject.current.id === 'pressWolffis'">
-        <press-wolffis></press-wolffis>
-      </div>
-      <div ng-if="newsObject.current.id === 'pressTechstars'">
-        <press-techstars></press-techstars>
-      </div> -->
-
     </div>
 
   </div>
   <div class="row">
 
-    <div class="col-sm-2">
-      <div class="news-controls" ng-click="currentNews('prev')">
-        < PREV
+    <div class="col-2">
+      <div class="news-controls" ng-if="newsObject.pos !== 0" ng-click="currentNews('prev')">
+        PREV
       </div>
     </div>
 
-    <div class="col-sm-8"> </div>  <!-- break in page -->
+    <div class="col-8"> </div>  <!-- break in page -->
 
-    <div class="col-sm-2">
-      <div class="news-controls" ng-click="currentNews('next')">
-        NEXT >
+    <div class="col-2">
+      <div class="news-controls" ng-if="newsObject.pos != newsArticles.length-1" ng-click="currentNews('next')">
+        NEXT
       </div>
     </div>
   </div>

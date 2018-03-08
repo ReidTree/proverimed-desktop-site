@@ -4,14 +4,14 @@ app.controller('ctrl', function($scope, $location, proverimedFactory, apiFactory
   $scope.vendorList = apiFactory.vendorList;
   $scope.newsArticles = apiFactory.newsArticles;
   $scope.contacts = apiFactory.ExecContacts;
+  $scope.pricingIcons = apiFactory.pricingIcons;
 
   $scope.routeClick = function(x, where, route) {
-    $scope.currentLocation = proverimedFactory.highLight(x, where, route);
+    $scope.currentLocation = proverimedFactory.foldHightlight(x, where, route);
     $location.path(x)
   }
 
   $scope.newsObject = proverimedFactory.newsObject();
-  // $scope.news = "pressIncorporation"
   $scope.currentNews = function(x) {
     $scope.news = proverimedFactory.currentNews(x);
     $scope.newsObject = proverimedFactory.newsObject();

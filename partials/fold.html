@@ -1,0 +1,25 @@
+<div class="fold">
+
+  <!-- HEAD LOGO -->
+  <div class="logo-wrap container">
+    <div class="logo-wrap row">
+      <div class="col-4">
+        <img id="logo" src="./images/156.gif" alt="Proverimed Logo">
+      </div>
+    </div>
+  </div>
+
+  <!-- FOLD BUTTONS -->
+  <div class="container-fluid fold-btn-container" >
+
+    <div class="row">
+      <div ng-repeat="foldBtns in foldBtn" class={{foldBtns.class+foldBtns.col}} ng-click="routeClick(this.foldBtns.linkTo, true, route)" >
+        <div class="fold-btn ">
+          <h3 class="fold-text align-middle">{{foldBtns.value}}</h3>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

@@ -1,11 +1,11 @@
 <div class="contact-container container">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-12">
       <p class="contact-center">For inquiries about Proverimed please email us.</p>
 
       <div ng-repeat="contact in contacts"  class="row contact-individual">
-        <div class="col-sm-3"> </div>
-        <div class="col-sm-6 contact-id">
+        <div class="col-2 col-lg-3"> </div>
+        <div class="col-8 col-lg-6 contact-id">
           <div class="email-contact">
             <h3 class="contact-name">{{contact.fName}} {{contact.lName}}</h3>
             <p class="contact-title">{{contact.title}}</p>
@@ -20,18 +20,18 @@
             </p>
           </div>
         </div>
-        <div class="col-sm-1">
+        <div class="col-1 col-lg-1">
           <a class="contact-email-hover" target="_blank" href={{contact.linkedin}}>
             <img class="social-icons" src="../images/linkedIn-logo.png" alt="LinkedIn Logo">
           </a>
         </div>
-        <div class="col-sm-2"> </div>
+        <div class="col-1 col-lg-2"> </div>
       </div>
 
     </div>
 
 
-    <div class="col-sm-12">
+    <div class="col-12">
       <div class="contact-social contact-center">
         <span><h4>Check us out on LinkedIn</h4></span>
         <span><a target="_blank" href="https://www.linkedin.com/company/11493700/">

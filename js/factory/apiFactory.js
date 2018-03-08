@@ -122,10 +122,13 @@ app.factory('apiFactory', function(){
     "about": ["About Proverimed, LLC:"," Proverimed is an online clearinghouse addressing the manual work being performed by insurance carriers, nationwide, when responding to liability insurance coverage and claims history requests from credentials verification organizations, health plans, hospitals, and other companies that need to verify coverage of the health care providers seeking privileges to see patients through those entities."],
   }, ]
 
+  var pricingIcons = ["participation","insurance","appointment"]
+
   return {
     vendorList: vendorList,
     ExecContacts: ExecContacts,
     newsArticles: newsArticles,
+    pricingIcons: pricingIcons,
   };
 
 });

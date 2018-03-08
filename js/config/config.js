@@ -1,8 +1,9 @@
 var app = angular.module('proverimedApp');
 
-app.config(function($routeProvider){
+app.config(function($locationProvider, $routeProvider){
+
   $routeProvider
-    .when('/home', {
+    .when('/', {
       controller: 'ctrl',
       templateUrl: 'partials/home.html'
     })
@@ -26,7 +27,13 @@ app.config(function($routeProvider){
       controller: 'ctrl',
       templateUrl: 'partials/participation.html'
     })
-    .otherwise({redirectTo: '/home'});
+    .otherwise({redirectTo: '/'});
 
-//closure for app.config
+//checks for window.history support in browser
+  if (window.history) {
+    $locationProvider.html5Mode({
+      enabled: true,
+      requireBase: false
+    }).hashPrefix('!');
+  }
 });

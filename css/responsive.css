@@ -1,0 +1,58 @@
+ /* Larger Smartphones ---------- */
+@media only screen and (min-width : 480px) {
+  .fold-text { font-size: .7rem; }
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-width : 768px) {
+  /* FOLD START */
+  .fold-text { font-size: .9rem; }
+  /* FOLD END */
+
+  /* HOME START */
+  #home-img-contain div.container-fluid { transform: translateY(-350px); -ms-transform: translateY(-350px); -webkit-transform: translateY(-350px); } .home-img-wrap { max-height: 500px;} #portal, #enroll { border: 3px solid rgba(0,135,220,1); box-shadow: 0px 0px 6px 10px rgba(255,255,255,.5); font-size: .8rem; }
+  /* HOME END */
+
+  /* ABOUT VIEW  START*/
+  .about-motto {font-size: 2rem;} .about-text {font-size: 1.4rem;}
+  /* ABOUT VIEW  END*/
+
+  .pricing-container { max-width: 1200px; margin: 70px auto 50px 0;}
+
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-width : 900px) {
+  div.container { max-width: 1200px; }
+  /* FOLD START */
+  .fold-text { font-size: 1rem; }
+  /* FOLD END */
+
+  .parti-wrap, .verifi-wrap, .claims-wrap {font-size: 1.3em;}
+  p.free-check {font-size: 24px;}
+  .arrow-r {width: 8%}
+
+
+}
+
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1200px) {
+  /* HOME START */
+  .home-img { transform: translateY(-30%); -ms-transform: translateY(-30%); -webkit-transform: translateY(-30%);} .home-img-wrap { max-height: 600px;} #portal, #enroll {font-size: 1rem;}
+  /* HOME END */
+
+  /* PRICE START */
+  .parti-wrap, .verifi-wrap, .claims-wrap {font-size: 1.5em;}
+  .parti-wrap {cursor: pointer;}
+  .pricing-title{margin: 20px 0 0 0;}
+  .price-digits{font-size: 48px; margin-top: 12px; }
+  /* PRICE END */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+
+}
