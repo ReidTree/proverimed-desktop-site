@@ -3,7 +3,7 @@ var app = angular.module('proverimedApp');
 app.config(function($locationProvider, $routeProvider){
 
   $routeProvider
-    .when('/', {
+    .when('/home', {
       controller: 'ctrl',
       templateUrl: 'partials/home.html'
     })
@@ -13,6 +13,10 @@ app.config(function($locationProvider, $routeProvider){
     })
     .when('/news', {
       controller: 'ctrl',
+      templateUrl: 'partials/news.html'
+    })
+    .when('/news/:newsArticlesId', {
+      controller: 'newsCtrl',
       templateUrl: 'partials/news.html'
     })
     .when('/about', {
@@ -27,13 +31,29 @@ app.config(function($locationProvider, $routeProvider){
       controller: 'ctrl',
       templateUrl: 'partials/participation.html'
     })
-    .otherwise({redirectTo: '/'});
+    .when('/solutions', {
+      controller: 'ctrl',
+      templateUrl: 'partials/solutions.html'
+    })
+    .when('/MPL', {
+      controller: 'ctrl',
+      templateUrl: 'partials/MPL.html'
+    })
+    .when('/CVO', {
+      controller: 'ctrl',
+      templateUrl: 'partials/CVO.html'
+    })
+    .when('/test12345', {
+      controller: 'ctrl',
+      templateUrl: 'partials/home-test.html'
+    })
+    .otherwise({redirectTo: '/home'});
 
 //checks for window.history support in browser
-  if (window.history) {
-    $locationProvider.html5Mode({
-      enabled: true,
-      requireBase: false
-    }).hashPrefix('!');
-  }
+  // if (window.history) {
+  //   $locationProvider.html5Mode({
+  //     enabled: true,
+  //     requireBase: false
+  //   }).hashPrefix('!');
+  // }
 });

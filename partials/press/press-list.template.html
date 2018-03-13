@@ -1,0 +1,23 @@
+<div >
+    <div class="news-conainter" >
+      <div  class="news-article">
+        <div class="pressTitleDetails">
+          <h4 class="pressDate"> <strong>{{article.current.date}}</strong> </h4>
+          <h6>{{article.current.author}}</h6>
+          <h6>{{article.current.company}}</h6>
+          <h6><a href="mailto:msparkia@proverimed.com">{{article.current.email}}</a></h6>
+          <h2 class="news-title">{{article.current.title}}</h2>
+          <h5 class="news-subtitle">{{article.current.subTitle}}</h5>
+        </div>
+        <div class="news-content">
+          <span>
+            <p ng-repeat="paragraph in article.current.paragraphs" ng-init="outerIndex = $index"><strong ng-if="outerIndex===0">{{article.current.bold}}</strong>
+              <span>{{paragraph}}</span>
+            </p>
+
+            <p><strong>{{article.current.about[0]}}</strong>{{article.current.about[1]}}</p>
+          </span>
+        </div>
+      </div>
+    </div>
+</div>

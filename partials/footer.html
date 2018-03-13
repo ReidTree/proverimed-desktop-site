@@ -1,0 +1,36 @@
+<div ng-controller="ctrl" class="footer-contain" >
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-2 footer-col">
+        <h4>SITE LINKS</h4>
+        <div ng-repeat="foldBtns in foldBtn" class="footer-direct {{foldBtns.class}}"  >
+          <div class="footer-text-wrap" ng-click="routeClick(this.foldBtns.linkTo, true, route)">
+            <h5 class="footer-text align-middle" >{{foldBtns.value}}</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-8 footer-about">
+        <h4>{{aboutProverimed.title | uppercase}}</h4>
+        <p class="footer-about-text">{{aboutProverimed.content}}</p>
+
+        <span><a target="_blank" href="https://www.linkedin.com/company/11493700/">
+          <img class="footer-social-icons" src="../images/linkedIn-logo.png" alt="LinkedIn Logo">
+        </a></span>
+      </div>
+
+      <div class="col-2 footer-news">
+        <h4>RECENT NEWS</h4>
+        <div ng-repeat="article in newsArticles" class="footer-recent-news" ng-click="currentNews(article.id)">{{article.shortTitle}}</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="trade-mark">
+    <h6 id="trade-mark">© 2018 Proverimed, LLC</h6>
+  </div>
+
+</div>

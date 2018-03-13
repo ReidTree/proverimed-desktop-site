@@ -1,0 +1,7 @@
+.solutions-section { text-align: center;}
+.solutions-section div.row.solutions-head { padding-top: 100px; margin: 0 auto;}
+.solutions-section div.row.solutions-options { padding: 25px 0; margin: 0 auto;}
+.solutions-section div.row.solutions-options div.solutions-click { padding: 25px 0; background-color: rgb(0,135,220); border-radius: 10px; cursor: pointer; color: white;}
+.solutions-section div.row.solutions-options div.solutions-click:hover { filter: grayscale(100%); transition: .3s;}
+.solutions-section div h2, .solutions-click h5 { margin: 0 auto; width: 100%;}
+.solutions-section div.row p { width: 100%; padding: 10px 0;}

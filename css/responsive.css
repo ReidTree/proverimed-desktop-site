@@ -1,6 +1,7 @@
  /* Larger Smartphones ---------- */
 @media only screen and (min-width : 480px) {
   .fold-text { font-size: .7rem; }
+  .pressDate { float: right; font-size: 14px; font-weight: 300;}
 
 }
 
@@ -8,18 +9,31 @@
 @media only screen and (min-width : 768px) {
   /* FOLD START */
   .fold-text { font-size: .9rem; }
+  .btn-sub-text {font-size: .8rem; margin-top: 5px;}
+  .fold-btn-sub{ padding: 4px 0;}
+
   /* FOLD END */
 
   /* HOME START */
-  #home-img-contain div.container-fluid { transform: translateY(-350px); -ms-transform: translateY(-350px); -webkit-transform: translateY(-350px); } .home-img-wrap { max-height: 500px;} #portal, #enroll { border: 3px solid rgba(0,135,220,1); box-shadow: 0px 0px 6px 10px rgba(255,255,255,.5); font-size: .8rem; }
+  #home-img-contain div.container-fluid { height: 500px; top: 350px;}
+  .home-img-wrap { max-height: 500px;}
+   #portal, #enroll { border: 2px solid rgba(0,135,220,1); box-shadow: 0px 0px 6px 10px rgba(255,255,255,.5); font-size: .8rem; }
   /* HOME END */
 
   /* ABOUT VIEW  START*/
-  .about-motto {font-size: 2rem;} .about-text {font-size: 1.4rem;}
+  .about-motto {font-size: 1.7rem;} .about-text {font-size: 1.4rem;}
   /* ABOUT VIEW  END*/
+  .pressDate { float: right; font-size: 16px; font-weight: 300;}
 
   .pricing-container { max-width: 1200px; margin: 70px auto 50px 0;}
 
+  /* FOOTER */
+  div.footer-recent-news, h5.footer-text {font-size: .7rem;}
+  p.footer-about-text {font-size: .8rem;}
+  div.footer-news h4, div.footer-col h4, div.footer-about h4 {font-size: .8rem; color: black; font-weight: bold;}
+
+
+  /* FOOTER END */
 
 }
 
@@ -32,15 +46,27 @@
 
   .parti-wrap, .verifi-wrap, .claims-wrap {font-size: 1.3em;}
   p.free-check {font-size: 24px;}
-  .arrow-r {width: 8%}
+  .pressDate { float: right; font-size: 18px; font-weight: 300;}
+  #home, #about, #pricing, #news, #team, #homeID, #aboutID, #pricingID, #newsID, #teamID, #solutions, #solutionsID, #fold-btn-container, .fold-btn-main {padding: 0 10px;}
+  .check-participation span {font-size: 1.2em;}
 
+  /* FOOTER */
+  div.footer-recent-news, h5.footer-text {font-size: .7rem;}
+  p.footer-about-text {font-size: .9rem;}
+  div.footer-news h4, div.footer-col h4, div.footer-about h4 {font-size: 1.2rem; color: black; font-weight: bold;}
+
+
+  /* FOOTER END */
 
 }
 
 
 /* Desktops and laptops ----------- */
 @media only screen and (min-width : 1200px) {
+  #home, #about, #pricing, #news, #team, #homeID, #aboutID, #pricingID, #newsID, #teamID, #fold-btn-container, #solutions, #solutionsID, .fold-btn-main {padding: 0 15px;}
+
   /* HOME START */
+  #home-img-contain div.container-fluid { height: 500px; top: 400px;}
   .home-img { transform: translateY(-30%); -ms-transform: translateY(-30%); -webkit-transform: translateY(-30%);} .home-img-wrap { max-height: 600px;} #portal, #enroll {font-size: 1rem;}
   /* HOME END */
 
@@ -49,7 +75,19 @@
   .parti-wrap {cursor: pointer;}
   .pricing-title{margin: 20px 0 0 0;}
   .price-digits{font-size: 48px; margin-top: 12px; }
+  .check-participation span {font-size: 1.5em;}
+
+
   /* PRICE END */
+
+  /* FOOTER */
+  div.footer-recent-news, h5.footer-text {font-size: .8rem;}
+  p.footer-about-text {font-size: 1rem;}
+  div.footer-news h4, div.footer-col h4, div.footer-about h4 {font-size: 1.2rem; color: black; font-weight: bold;}
+
+
+  /* FOOTER END */
+
 }
 
 /* Large screens ----------- */

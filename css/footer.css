@@ -1,0 +1,24 @@
+/* FOOTER / TRADE MARK START*/
+
+.footer-contain {background-color: rgb(0,135,220); width: 100%; min-height: 200px; bottom: 0; margin-top: 50px; position: relative; padding-top: 25px;}
+div.footer-col div.active .footer-text-wrap {background-color: white; color: black; padding: 0px 4px;}
+.footer-text-wrap { color: white; cursor: pointer;}
+.footer-text-wrap:hover, .footer-recent-news:hover { color: black; transition: .3s;}
+
+.footer-direct { color: black; padding: 0px 4px; width: 100%;}
+.footer-text {font-size: .8rem;}
+.footer-about-text {font-size: .5rem;}
+.footer-recent-news {cursor: pointer;}
+.footer-social-icons { width: 35px; cursor: pointer; filter: grayscale(100%); box-shadow: 0px 0px 0 0 white;}
+.footer-social-icons:hover { filter: grayscale(0%); box-shadow: 0px 0px 10px 0px white; transition: .3s;}
+
+.footer-news  { color: white;}
+.footer-news h4, .footer-col h4, .footer-about h4 {font-size: 1.2rem; color: black; font-weight: bold;}
+
+.footer-about {color: white; text-align: center; border-left: 2px dotted white; border-right: 2px dotted white; padding-bottom: 20px; }
+
+.trade-mark {  position: static; width: 100%; font-size: 10px; text-align: center; padding: 15px 0; bottom: 0; background-color: rgb(0,0,0); color: white; border-top: 1px solid white;}
+#trade-mark {font-size: .7rem; margin:  0;}
+
+
+/* FOOTER / TRADE MARK END*/

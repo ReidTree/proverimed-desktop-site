@@ -13,7 +13,7 @@ app.factory('apiFactory', function(){
     {
       "fName": "Todd",
       "lName": "Wolffis",
-      "title": "Executive VP, Business Development",
+      "title": "Strategy and Solutions Delivery",
       "mailto": "mailto:twolffis@proverimed.com",
       "email": "TWolffis@proverimed.com",
       "linkedin": "https://www.linkedin.com/in/todd-wolffis-5463545/", },
@@ -27,7 +27,7 @@ app.factory('apiFactory', function(){
     {
       "fName": "Reid",
       "lName": "Trierweiler",
-      "title": "Director of User Experience",
+      "title": "Frontend Developer",
       "mailto": "mailto:rtrierweiler@proverimed.com",
       "email": "RTrierweiler@proverimed.com",
       "linkedin": "https://www.linkedin.com/in/reid-trier",
@@ -100,7 +100,7 @@ app.factory('apiFactory', function(){
     "company": "Proverimed, LLC",
     "email": "msparkia@proverimed.com",
     "title": "Proverimed, LLC Raises Capital",
-    "shortTitle": "shortTitle",
+    "shortTitle": "Raises Capital",
     "subTitle": "Company focusing on automation of process, receives first round of funding",
     "bold": "Lansing, MI:",
     "paragraphs": [
@@ -122,13 +122,17 @@ app.factory('apiFactory', function(){
     "about": ["About Proverimed, LLC:"," Proverimed is an online clearinghouse addressing the manual work being performed by insurance carriers, nationwide, when responding to liability insurance coverage and claims history requests from credentials verification organizations, health plans, hospitals, and other companies that need to verify coverage of the health care providers seeking privileges to see patients through those entities."],
   }, ]
 
-  var pricingIcons = ["participation","insurance","appointment"]
+  var pricingIcons = [{"title": "participation", "img": "../images/participation.png"},{"title": "insurance", "img": "../images/insurance.png"},{"title": "appointment", "img": "../images/appointment.png"}]
+
+
+  var aboutProverimed = {"title": "About Proverimed, LLC", "content": "Proverimed is an online clearinghouse addressing the manual work being performed by insurance carriers, nationwide, when responding to liability insurance coverage and claims history requests from credentials verification organizations, health plans, hospitals, and other companies that need to verify coverage of the health care providers seeking privileges to see patients through those entities.", }
 
   return {
     vendorList: vendorList,
     ExecContacts: ExecContacts,
     newsArticles: newsArticles,
     pricingIcons: pricingIcons,
+    aboutProverimed: aboutProverimed,
   };
 
 });

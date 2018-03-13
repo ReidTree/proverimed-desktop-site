@@ -1,3 +1,4 @@
+
 <div class="fold">
 
   <!-- HEAD LOGO -->
@@ -6,20 +7,79 @@
       <div class="col-4">
         <img id="logo" src="./images/156.gif" alt="Proverimed Logo">
       </div>
+      <div class="col-8" ng-if="phone">
+        <span class="align-middle " ng-init="style = {'display': 'hidden'}" >
+          <div ng-if="checkFade" class="{{fade}}">
+            hello
+          </div>
+          <i id="hamburger" ng-if="!checkFade" class="material-icons md-24" ng-click="hamStyle(true)">menu</i>
+          <i id="closeout" ng-if="checkFade" class="material-icons md-24" ng-click="hamStyle(false)">close</i>
+        </span>
+      </div>
     </div>
+    <span ng-if="res.phone">PHONE</span> | <span ng-if="res.tablet">TABLE</span> | <span ng-if="res.desktop">DESKTOP</span> {{$ctrl.res}}
   </div>
 
   <!-- FOLD BUTTONS -->
   <div class="container-fluid fold-btn-container" >
 
-    <div class="row">
-      <div ng-repeat="foldBtns in foldBtn" class={{foldBtns.class+foldBtns.col}} ng-click="routeClick(this.foldBtns.linkTo, true, route)" >
-        <div class="fold-btn ">
-          <h3 class="fold-text align-middle">{{foldBtns.value}}</h3>
+    <div id="fold-btn-container" class="row">
+
+      <div ng-repeat="foldBtns in foldBtn" id={{foldBtns.id}} class="fold-btn-main {{foldBtns.class+foldBtns.col}}"  >
+
+        <div id="fold-btn" class="fold-btn btn-hov" >
+
+          <div class="fold-text-wrap" ng-click="routeClick(this.foldBtns.linkTo, true, route)">
+
+            <h3 id="{{foldBtns.id}}ID" class="fold-text align-middle" >{{foldBtns.value}}</h3>
+
+          </div>
+
+          <div class="fold-btn-sub" ng-if="foldBtns.sub" ng-repeat="btn in foldBtns.subBtns track by $index" ng-click="routeClick(this.btn.linkTo, true, route)">
+
+            <h3 class="btn-sub-text ">{{btn.title}}</h3>
+          </div>
         </div>
       </div>
     </div>
 
   </div>
+  <div class="">
 
+  </div>
 </div>
+
+
+
+
+
+<!-- <div ng-if="testing === false" class="fold"> -->
+
+  <!-- HEAD LOGO -->
+  <!-- <div class="logo-wrap container">
+    <div class="logo-wrap row">
+      <div class="col-4">
+        <img id="logo" src="./images/156.gif" alt="Proverimed Logo">
+      </div>
+    </div>
+  </div> -->
+
+  <!-- FOLD BUTTONS -->
+  <!-- <div class="container-fluid fold-btn-container" >
+
+    <div id="fold-btn-container" class="row">
+      <div ng-repeat="foldBtns in foldBtn" id={{foldBtns.id}} class="fold-btn-main {{foldBtns.class+foldBtns.col}}" ng-click="routeClick(this.foldBtns.linkTo, true, route)" >
+        <div id="fold-btn" class="fold-btn btn-hov" >
+          <h3 id="{{foldBtns.id}}ID" class="fold-text align-middle">{{foldBtns.value}}</h3>
+          <div class="fold-btn-sub" ng-if="foldBtns.sub" ng-repeat="icon in pricingIcons">
+            <h3 class="btn-sub-text ">{{icon.title}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="">
+
+  </div>
+</div> -->

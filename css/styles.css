@@ -1,35 +1,27 @@
 body { margin: 0; width: 100%;}
 .material-icons.md-24 { font-size: 18px; }
-#portal, #enroll, .home, .about, .pricing, .news, .team, .view-title, .pricing-container { font-family: 'Helvetica', sans-serif; }
+ #portal, #enroll, .home, .about, .pricing, .news, .team, .view-title  { font-family: 'Lato', sans-serif; }
+ .pricing-container {font-family: "Helvetica", sans-serif;}
+ /* p {font-family: 'Karma', serif;} */
+
+/* APP OVERVIEW */
+
+
 
 /* HOME START */
 #home-img-contain { width: 100%;  overflow: hidden; }
-#home-img-contain div.container-fluid { position: relative; transform: translateY(-150px); -ms-transform: translateY(-150px); -webkit-transform: translateY(-150px); }
+#home-img-contain div.container-fluid { position: absolute; top: 250px;}
 #home-img-contain div.row { max-width: 1200px; margin: 0 auto;}
 .home-img { width: 100%;}
-.home-img-wrap { width: 100%; max-height: 300px;}
-#portal, #enroll { border: 1px solid rgba(0,135,220,1); box-shadow: 0px 0px 4px 5px rgba(255,255,255,.5); text-align: center; font-weight: 450; font-size: 1rem; cursor: pointer; background-color: rgba(255,255,255,1); font-family: 'Noto Sans', sans-serif; transition: .1s; }
-div#portal-wrap div.portal-title-wrap:hover { background-color: rgba(0,135,220,1); box-shadow: 0px 0px 0px 0px rgba(255,255,255,.5); color: white; }
+.home-img-wrap { width: 100%; max-height: 300px; overflow: hidden;}
+#portal, #enroll { border: 1px solid rgba(0,135,220,1); box-shadow: 0px 0px 4px 5px rgba(255,255,255,.5); text-align: center; font-weight: 450; font-size: 1rem; cursor: pointer; background-color: rgba(255,255,255,1); transition: .1s; }
+div#portal-wrap button.portal-title-wrap:hover { background-color: rgba(0,135,220,1); box-shadow: 0px 0px 0px 0px rgba(255,255,255,.5); color: white; }
 .portal-title { padding: 5% 0; }
+button.portal-title-wrap {width: 100%}
 /* HOME START */
 
 
-/* PRICE START */
-.pricing-container { max-width: 1200px; margin: 50px auto 50px 0;}
-.parti-wrap, .verifi-wrap, .claims-wrap { text-align: center; font-size: 1rem; font-weight: bold; height: 300px; background-color: rgba(255,255,255,1); border: 3px solid black; z-index: 100;}
-.parti-wrap {cursor: pointer;}
-.pricing-title{margin: 10px 0 0 0; font-weight: bolder; max-height: 30px;}
-#price-circle {background-color: #0087dc; height: 100px; margin: 0 auto; border-radius: 50%; transform: translateY(-25%); -ms-transform: translateY(-25%); -webkit-transform: translateY(-25%); }
-.price-digits{font-weight: bolder; font-size: 36px; color: white; margin-top: 20px; }
-p.free-check {font-size: 20px; margin-top: 20px; line-height: 1.7rem;}
-.price-icons {position: relative; transform: translate(10%,25%); -ms-transform: translate(10%,25%); -webkit-transform: translate(10%,25%); max-width: 75%}
-.arrow-r { width: 10%; margin-left: 5px; display: inline-flex;}
-.check-participation { bottom: 0; position: absolute; width: 100%; background-color: grey; padding: 10px 0; color: white;}
-.price-per {font-size: 16px; font-weight: normal; bottom: 75px; position: absolute; text-align: center; width: 100%; }
-/* CHECK ------------ */
-.pricing-circle-back {height: 50px; background-color: rgba(0,0,0,.7); margin-top: 50px }
-.decimal-shift {transform: translateY(-50%); -ms-transform: translateY(-50%); -webkit-transform: translateY(-50%); font-size: 50%; display: inline-block;}
-/* PRICE END */
+
 
 
 .participation-container { max-width: 1200px; margin: 0 auto; }
@@ -38,15 +30,6 @@ p.free-check {font-size: 20px; margin-top: 20px; line-height: 1.7rem;}
 .vendor-list-title { margin: 50px 0 10px 0}
 .vendor-city, .vendor-code, .vendor-name, .vendor-state{ border-bottom: 1px solid black;}
 
-/* ABOUT VIEW  START*/
-div.align-middle.col-12 { display: inline-flex;}
-.about-motto {margin: 50px 0 30px 0; color:rgba(0,135,220,1); font-size: 1.5rem; text-align: center;}
-.icon-align {vertical-align: middle; display: inline-flex;}
-div.about-blt {margin: 40px auto 0 0;}
-.about-text {display: inline-flex; line-height: 2rem; margin: -5px 20px; font-size: 1rem;}
-div.about-text.oneline {margin: 10px 20px 10px 20px;}
-.icon-about {max-height: 50px}
-/* ABOUT VIEW  END*/
 
 /* NEWS VIEW  START*/
 .news-controls { cursor: pointer; background-color: rgba(0,135,220,1); width: 100%; font-size: 1.2rem; text-align: center; font-weight: bold; padding: 10px 0; color: white; border-radius: 5px; transition: .2s;}
@@ -58,7 +41,7 @@ div.about-text.oneline {margin: 10px 20px 10px 20px;}
 .recent-news { margin: 15px 10px 5px 10px;}
 .pressTitleDetails { margin: 0 0 40px 0;}
 div.pressTitleDetails h6 { margin: 0 0 5px 0;}
-.pressDate { float: right;}
+.pressDate { float: right; font-size: 24px; font-weight: 300;}
 .pressImg { margin-top: 50px; max-width: 100%;}
 .news-container { width: 100%; } .news-article { max-width: 1200px; margin: 50px auto; } .news-title { margin: 40px 0 0 0; font-size: 28px; } .news-content {display: inline;} .news-content span img {float: left; margin-right: 10px;}
 .news-title, .news-subtitle { text-align: center; }
@@ -85,8 +68,8 @@ a:hover {text-decoration: none; color: grey;}
 /* CONTACT PAGE END */
 
 /* WATERMARK START */
-.water-mark-contain {width: 40%;  position: absolute; bottom: 0; right: 0; overflow: hidden;}
-.waterMark {position: relative; bottom: 0; right: 0; opacity: .08; z-index: -1; width: 100%; transform: translateY(30%); -ms-transform: translateY(30%); -webkit-transform: translateY(30%); }
+.water-mark-contain {width: 40%;  position: absolute; bottom: -150px; right: 0; overflow: hidden; overflow-y: auto}
+.waterMark {position: relative; bottom: 0; right: 0; opacity: .08; z-index: -1; width: 100%;  }
 /* WATERMARK END */
 
 
@@ -104,18 +87,35 @@ a:hover {text-decoration: none; color: grey;}
 .fold-btn-container { background-color: #0087dc; }
 div.fold-btn-container div.row { margin: 0 auto; max-width: 1200px;}
 div.active { background-color: black; transition: 1s}
-.fold-btn:hover { background-color: white; color: black; }
-.home, .about, .pricing, .news, .team { border-right: 3px solid white; text-align: center; align-self: center; cursor: pointer;  background-color: #0087dc}
-.home { border-left: 3px solid white;}
-.fold-btn { padding: 18px 0; color: white; max-height: 30px; }
+.fold-btn-main { border-right: 3px solid white; text-align: center; align-self: center; cursor: pointer;  background-color: #0087dc}
+
+.fold-btn:hover, .fold-btn-sub { background-color: white;  color: black;  z-index: 1000;}
+.btn-hov:hover .fold-btn-sub { display: block !important ;  height: 100%; padding: 8px 0; transition: .3s;}
+.fold-btn-sub{display: none; padding: 0px 0 height: 0px; width: 100%;  background-color: white; border-bottom: 3px solid rgb(0,135,220);}
+
+.fold-text-wrap {padding-top: 25px; height: 100%;}
+.btn-sub-text {font-size: 1.2rem; margin-top: 5px; font-weight: 450; }
+
+div.btn-hov .fold-btn-sub:first-of-type { border-top: 3px solid rgb(0,135,220);}
+
+#fold-btn .fold-btn-sub:hover {background-color: #0087dc; color: white;}
+
+#fold-btn h3 { height: 100%;}
+
+#home, #about, #pricing, #news, #team, #homeID, #aboutID, #pricingID, #newsID, #teamID, #fold-btn-container, #solutions, #solutionsID, #activeID, .fold-btn-main {padding: 0 5px;}
+
+#home { border-left: 3px solid white;}
+.fold-btn { position: relative; color: white; height: 50px;}
 div.active .fold-btn  { background-color: white; color: black;}
 .fold-text { margin-top: -9px; font-size: .5rem; font-weight: bold; }
+
+#hamburger, #closeout {float: right; font-size: 18px; cursor: pointer;}
+
+
 /* FOLD BUTTONS */
 
 /* FOLD END */
 
-/* FOOTER / TRADE MARK START*/
-.trade-mark {  position: static; width: 100%; font-size: 10px; text-align: center; padding: 16px; bottom: 0; }
-/* FOOTER / TRADE MARK END*/
+
 
 /* INDEX STYLES */

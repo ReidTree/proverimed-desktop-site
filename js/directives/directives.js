@@ -11,11 +11,11 @@ app.directive('foldCont', function() {
       var init = "/" + lightEle;
       var count = 0;
       var foldBtns = [
-        {"class": "home", "linkTo": "/home", "value": "HOME", "col": " col-2"},
-        {"class": "about", "linkTo": "/about", "value": "ABOUT", "col": " col-2"},
-        {"class": "pricing", "linkTo": "/pricing", "value": "PRICING & PARTICIPATION", "col": " col-4"},
-        {"class": "news", "linkTo": "/news", "value": "NEWS", "col": " col-2"},
-        {"class": "team", "linkTo": "/team", "value": "TEAM", "col": " col-2"},]
+        {"id": "home", "class": "home", "sub": false, "linkTo": "/home", "value": "HOME", "col": " col-2"},
+        {"id": "solutions", "class": "solutions", "sub": true, "subBtns": [{"title": "I'm a MPL Company", "linkTo": "/MPL",},{"title": "I'm a CVO Company", "linkTo": "/CVO",}], "linkTo": "/solutions", "value": "SOLUTIONS", "col": " col-2"},
+        {"id": "pricing", "class": "pricing", "sub": false, "linkTo": "/pricing", "value": "PRICING & PARTICIPATION", "col": " col-4"},
+        {"id": "news", "class": "news", "sub": false, "linkTo": "/news", "value": "NEWS", "col": " col-2"},
+        {"id": "team", "class": "team", "sub": false, "linkTo": "/team", "value": "TEAM", "col": " col-2"},]
 
       function changeBack(x, check){
         if (typeof lightEle === 'number'){
@@ -74,9 +74,40 @@ app.directive('pressTechstars', function() {
     templateUrl: "../partials/press/techstars-3-5-2018.html",
   }
 });
+
+app.directive('aboutBullets', function() {
+  return {
+    transclude: false,
+    templateUrl: "../partials/about-bullets.html",
+  }
+});
+
 app.directive('waterMark', function() {
   return {
     transclude: false,
     templateUrl: "../partials/waterMark.html",
+  }
+});
+
+app.directive('scrollResolve', function() {
+  return {
+    transclude: false,
+    templateUrl: "../partials/fold-testing.html",
+    link: function(scope, element, attr) {
+      var currentUrl = window.document.URL;
+      var scrollY = window.scrollY
+      window.addEventListener("scroll", function(e){
+        scope.scrollTest = e.scrollY
+      })
+      scope.scrollTest = currentUrl;
+      scope.scrollClass ="tests";
+    },
+  }
+});
+
+app.directive('footerSection', function() {
+  return {
+    transclude: false,
+    templateUrl: "../partials/footer.html",
   }
 });

@@ -4,16 +4,19 @@
 
     <div class="col-sm-3 ">
       <img class="pressImg" src="../images/33.png">
-      <div class="news-articles-selection">
+      <recent-news></recent-news>
+      <!-- <div class="news-articles-selection">
         <h5 class="recent-news">
           Recent News
         </h5>
         <div ng-repeat="article in newsArticles" class="recent-news-btn" ng-click="currentNews(article.id)">{{article.shortTitle}}</div>
-      </div>
+      </div> -->
     </div>
 
     <div class="col-sm-9">
-      <div  >
+      <article-detail></article-detail>
+
+      <!-- <div  >
 
         <div class="news-conainter" >
           <div ng-repeat="article in newsArticles" class="news-article" ng-if="newsObject.current.id === article.id">
@@ -36,25 +39,26 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
     </div>
 
   </div>
-  <div class="row">
+  <news-buttons></news-buttons>
+  <!-- <div class="row">
 
     <div class="col-2">
-      <div class="news-controls" ng-if="newsObject.pos !== 0" ng-click="currentNews('prev')">
+      <div class="news-controls" ng-if="newsObject.prev" ng-click="currentNews(newsObject.prev)">
         PREV
       </div>
     </div>
 
-    <div class="col-8"> </div>  <!-- break in page -->
+    <div class="col-8"> </div>
 
     <div class="col-2">
-      <div class="news-controls" ng-if="newsObject.pos != newsArticles.length-1" ng-click="currentNews('next')">
+      <div class="news-controls" ng-if="newsObject.next" ng-click="currentNews($ctrl.newsObject.next)">
         NEXT
       </div>
     </div>
-  </div>
+  </div> -->
 </div>

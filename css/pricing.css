@@ -1,0 +1,34 @@
+/* PRICE START */
+.pricing-container { max-width: 1200px; margin: 50px auto 50px 0;}
+.parti-wrap, .verifi-wrap, .claims-wrap { text-align: center; font-size: 1rem; font-weight: bold; height: 300px; background-color: rgba(255,255,255,1); border: 3px solid black; z-index: 100;}
+.parti-wrap {cursor: pointer;}
+.pricing-title{margin: 10px 0 0 0; font-weight: bolder; max-height: 30px; font-size: 1rem;}
+.pricing-title h4 { font-size: 1.2rem; font-weight: bold;}
+
+#price-circle {background-color: #0087dc; height: 100px; margin: 0 auto; border-radius: 50%;
+  transform: translateY(-25%);
+  -ms-transform: translateY(-25%);
+  -webkit-transform: translateY(-25%);
+}
+.price-digits{font-weight: bolder; font-size: 36px; color: white; margin-top: 20px; }
+p.free-check {font-size: 20px; margin-top: 20px; line-height: 1.7rem;}
+
+.price-icons {position: relative;
+  transform: translate(25%,25%);
+  -ms-transform: translate(25%,25%);
+  -webkit-transform: translate(25%,25%);
+  max-width: 75%;
+}
+
+.arrow-r { width: 8%; margin-left: 5px; display: inline-block;}
+.check-participation { bottom: 0; position: absolute; width: 100%; background-color: grey; padding: 10px 0; color: white; font-size: .9em;}
+.price-per {font-size: 16px; font-weight: normal; bottom: 75px; position: absolute; text-align: center; width: 100%; }
+.pricing-circle-back {height: 50px; background-color: rgba(0,0,0,.7); margin-top: 50px }
+
+.decimal-shift {
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  font-size: 50%; display: inline-block;
+}
+/* PRICE END */

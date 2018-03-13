@@ -1,0 +1,6 @@
+<div class="news-articles-selection">
+  <h5 class="recent-news">
+    Recent News
+  </h5>
+  <div ng-repeat="article in newsArticles" class="recent-news-btn" ng-click="currentNews(article.id)">{{article.shortTitle}}</div>
+</div>
